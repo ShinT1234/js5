@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model - Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/c05.css">
+  </head>
+  <body>
+    <div id="page">
+      <h1 id="header">List</h1>
+      <h2>Buy groceries</h2>
+      <ul>
+        <li id="one"><em>fresh</em> figs</li>
+        <li id="two">pine nuts</li>
+        <li id="three">honey</li>
+        <li id="four">balsamic vinegar</li></ul>
+    </div>
+  </body>
+  <script>
+    var List=document.getElementsByTagName('ul')[0];
+
+    var newItemLast=document.createAttribute('li');
+    var newItemLast=document.createTextNode('cream');
+    newItemLast.appendChild(newTextLast);
+    List.appendChild(newItemLast);
+
+    var newItemLFirst=document.createElement('li');
+    var newItemLFirst=document.createTextNode('kale');
+    newItemLFirst.appendChild(newItemLFirst);
+    List.insertBefore(newItemLFirst,List.firstChild);
+
+    var ListItems=document.querySelectorAll('li');
+
+    var i;
+    for(i=0;i<ListItems.length;i++){    
+    ListItems[i].className='cool'
+    }
+
+    var heading=document.querySelector('h2');
+    var headingText=heading.firstChild.nodeValue;
+    var totalItems=ListItems.length;
+    var newHeading=headingText+'<span>'+totalItems+'</span>';
+    heading.innerHTML=newHeading;
+  </script>
+</html>
